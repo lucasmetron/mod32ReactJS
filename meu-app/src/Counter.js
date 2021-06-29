@@ -4,13 +4,10 @@ import React, { useState } from 'react';
 function Counter(props) {
 
     const [count, setCount] = useState(props.count) //a segunda opção da array, sempre deve ser set+o nome da primeira posição da array, para manter o padrão. Ex: [nome, setNome]
-    const [meuEstado, setMeuEstado] = useState('qualquer coisa');
 
     function add() {
         setCount(count + 1);
         console.log('clicado')
-        setMeuEstado(meuEstado + ' teste')
-        console.log(meuEstado);
     }
 
     return (
