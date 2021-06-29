@@ -6,7 +6,7 @@ class Counter extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = { count: this.props.count } //só aqui podemos utilizar o this.state
+        this.state = { count: 0 } //só aqui podemos utilizar o this.state
         this.add = this.add.bind(this)
     }
 
@@ -17,11 +17,18 @@ class Counter extends React.Component {
 
             return { count: state.count + 1 }
 
+        }, () => {
+            localStorage.setItem('state', JSON.stringify(this.state));
         })
     }
 
+
+    componentDidMount() {
+        this.setState(JSON.parse(localStorage.getItem('state')))
+    }
+
     shouldComponentUpdate() {
-        return false;
+        return true;
     }
 
 
