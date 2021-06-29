@@ -8,7 +8,6 @@ class Counter extends React.Component {
 
         this.state = { count: this.props.count } //só aqui podemos utilizar o this.state
         this.add = this.add.bind(this)
-        console.log(this)
     }
 
 
@@ -19,6 +18,10 @@ class Counter extends React.Component {
             return { count: state.count + 1 }
 
         })
+    }
+
+    shouldComponentUpdate() {
+        return false;
     }
 
 
