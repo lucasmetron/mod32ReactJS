@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import Header from './Header';
 import Counter from './Counter.js';
+import Counter, { Teste } from './Counter';
 
 function App() {
 
@@ -9,15 +10,15 @@ function App() {
 
   const [show, setShow] = useState(true)
 
-  useEffect(() => {
-    setInterval(() => {
-      time++;
-      console.log(time)
-      if (time > 5) {
-        setShow(false);
-      }
-    }, 1000);
-  }, [])
+  // useEffect(() => {
+  //   setInterval(() => {
+  //     time++;
+  //     console.log(time)
+  //     if (time > 5) {
+  //       setShow(false);
+  //     }
+  //   }, 1000);
+  // }, [])
 
 
   if (show === true) {
