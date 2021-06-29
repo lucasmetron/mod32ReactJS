@@ -11,6 +11,10 @@ function Counter(props) {
         }
         setCount(parseFloat(localStorage.getItem('count')));
 
+        return () => {
+            console.log("Contador deletado")
+        }
+
     }, []);
 
     useEffect(() => {
