@@ -79,3 +79,5 @@ function Counter(props) {
 // }
 
 export default Counter;
+
+export let Teste = "teste";
